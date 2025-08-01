@@ -186,6 +186,10 @@ body {
 }
 
 @media (max-width: 906px) {
+  body,
+  .card-container {
+    align-items: flex-start;
+  }
   .service-card {
     border: 1px solid #0D274D;
   }
