@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0D274D;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.card-container .service-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 281px;
+  max-width: 327px;
+  width: max-content;
+}
+.card-container .service-card .card-header {
+  background-color: #0D274D;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.card-container .service-card .card-title {
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+.card-container .service-card .card-body {
+  padding: 16px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 1px solid #0D274D;
+}
+.card-container .service-card .feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.card-container .service-card .feature-list li {
+  position: relative;
+  padding-left: 36px;
+  margin: 6px 0 8px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  word-break: break-word;
+}
+.card-container .service-card .feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  width: 17px;
+  height: 14px;
+  background-image: url("../assets/svg/mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.card-container .service-card .price-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.card-container .service-card .price-section .price-title {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 21px;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+.card-container .service-card .price-section .price-value {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0;
+  text-align: center;
+}
+.card-container .service-card .price-section .price-value strong {
+  font-size: 20px;
+  font-weight: 900;
+  color: #009900;
+}
+.card-container .service-card .card-footer {
+  height: 166px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-container .service-card .options-section {
+  width: 100%;
+}
+.card-container .service-card .options-section .divider {
+  color: #00BCEB;
+  border: 1px solid #00BCEB;
+  width: 238px;
+  margin: 0 auto 11px;
+}
+.card-container .service-card .options-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  padding-left: 0;
+  list-style: none;
+}
+.card-container .service-card .options-grid li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.card-container .service-card .options-grid li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background: url("assets/svg/play.svg") no-repeat center/contain;
+}
+.card-container .service-card .options-grid li:hover {
+  text-decoration: none;
+  color: #00BBEA;
+}
+.card-container .service-card .action-button {
+  width: 250px;
+  height: 46px;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background-color: #00BCEB;
+  border-radius: 6px;
+  border: none;
+  transition-duration: 300ms;
+}
+.card-container .service-card .action-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.card-container .service-card:first-child .card-header {
+  border-right: 0px solid rgba(255, 255, 255, 0.2);
+}
+.card-container .service-card:first-child .card-body {
+  border-left: 0px solid #0D274D;
+}
+.card-container .service-card:last-child .card-body {
+  border-right: 0px solid #0D274D;
+}
+
+@media (max-width: 906px) {
+  .service-card {
+    border: 1px solid #0D274D;
+  }
+}
+@media (max-width: 768px) {
+  html,
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .card-container .service-card {
+    width: 100vw;
+    max-width: 100%;
+    border: 1px solid #0D274D;
+  }
+}
+@media (min-width: 769px) {
+  #sand-service {
+    max-width: 289px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
